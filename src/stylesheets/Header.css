@@ -1,0 +1,105 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 25px;
+  border-bottom: 2px solid gainsboro;
+}
+
+header .content{
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+.content .logo{
+  font-weight: 700;
+  color: var(--black);
+  font-size: 24px;
+}
+.content .link-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.content .link-container .link{
+  color: var(--cor-text);
+  position: relative;
+}
+.link-container .link::after { 
+  content: '';
+  width: 0;
+  height: 4px;
+  background-color: var(--cor-base);
+  position: absolute;
+  margin-bottom: -46px;
+  bottom: 0;
+  left: 0;
+  transition: width .4s ease-in-out;
+}
+.content .link-container .link:hover::after{
+  width: 100%;
+}
+.content .link-container .link:hover{
+  color: var(--black);
+}
+
+
+
+header .user {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  gap: 35px;
+  position: relative;
+}
+
+.user button {
+  width: auto;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+
+
+.off{
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 5px 15px 0px rgba(0,0,0, 0.25);
+  transition: .4s ease;
+  visibility: hidden;
+}
+.off h2{
+  font-size: 25px;
+  font-weight: 500;
+  padding: 15px;
+  border-bottom: 1px solid var(--cor-text);
+}
+
+.off.active{
+  visibility: visible;
+  top: 80px;
+}
+
+
+
+.user figure{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user figure:hover {
+  border: 2px dashed var(--cor-base);
+}
+.user .avatar{
+  width: 100%;
+  object-fit: cover;
+}

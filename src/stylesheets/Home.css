@@ -1,0 +1,127 @@
+.container{
+  width: 100%;
+  display: flex;
+  gap: 110px;
+  align-items: center;
+  padding-top: 70px;
+  padding-inline: 50px;
+}
+
+.figure{
+  width: 100%;
+  display: grid;
+  gap: 30px;
+}
+.figure-central{
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
+.figure-central img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.detalhes {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.detalhes li {
+  width: 85px;
+  height: 85px;
+  position: relative;
+  cursor: pointer;
+}
+.detalhes li::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.detalhes li:hover::after{
+  background-color: rgba(0,0,0, 0.5);
+}
+.detalhes li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content{
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.content h1{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cor-base);
+}
+.content h2{
+  font-size: 45px;
+  color: var(--black);
+}
+.content p{
+  font-size: 14px;
+  line-height: 2;
+}
+.content .sales{
+  display: grid;
+  gap: 10px;
+}
+.content .sales .sale{
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+}
+.sales .old-sale{
+  color: var(--cor-text);
+  text-decoration: line-through;
+}
+
+
+.content .add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.content .add .counter{
+  display: flex;
+  align-items: center;
+  background-color: hsl(220, 14%, 75%);
+  overflow: hidden;
+  border-radius: 10px;
+  gap: 25px;
+}
+.content .add .counter .botao-counter{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  color: var(--cor-base);
+  cursor: pointer;
+}
+.content .add .counter .botao-counter:hover{
+  background-color: hsl(219, 9%, 45%);
+  width: 100%;
+}
+
+.content .add .cart-add {
+  width: 280px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--cor-base);
+  cursor: pointer;
+  transition: .4s;
+}
+.content .add .cart-add:hover {
+  box-shadow: 5px 5px 15px var(--cor-base);
+}
